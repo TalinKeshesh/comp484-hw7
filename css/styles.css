@@ -8,6 +8,15 @@
 /* Global styles
 ------------------------------------*/
 
+/* border box fix */
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
 body {
     margin: 0;
     font-family: "Comic Relief", system-ui;
@@ -41,7 +50,8 @@ h2 {
     font-weight: 600;
     font-style: normal;
     font-size: 2rem;
-    margin-top: 10px;
+    margin-top: 0;
+    margin: 0;
 }
 
 h3 {
@@ -60,6 +70,30 @@ ul {
     text-align: center;
 }
 
+.content-wrap {
+    max-width: 950px;
+    margin: 0 auto;
+    padding: 50px;
+    overflow: hidden;
+}
+
+/* I did the css you asked for but I think it looks better without the circular
+profile image, so I commented it out. You can uncomment it if you want to see how it looks! */
+
+/*.column-narrow {
+    width: 30%;
+    float: left;
+    padding-right: 3%;
+    min-height: 175px;
+}
+
+.column-wide {
+    width: 70%;
+    float: left;
+    min-height: 225px;
+}
+    */
+
 /* Header & Footer
 ------------------------------------*/
 header {
@@ -68,10 +102,11 @@ header {
 
 footer {
     background: #e45aa8; /* same dark pink as header */
+    text-align: center;
 }
 
 header img {
-    width: 400px;          /* adjust size
+    width: 400px;          /* adjust size */
     height: 180px;         /* makes it a rectangle */
     border-radius: 10px;   /* set to 0px sharp corners */
     object-fit: cover;
@@ -79,11 +114,35 @@ header img {
     margin: 0 auto 12px;
 }
 
+/* I did the css you asked for but I think it looks better without the circular
+profile image, so I commented it out. You can uncomment it if you want to see how it looks! */
+
+/* Note: only border-radius would remain. The rest would be deleted or commented out. */
+
+/*
+.profile-img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    float: left;
+    margin-right: 30px;
+}
+    */
+
 footer a {
     display: inline-block;
     margin: 6px 10px;
 }
 
+.contact-info a {
+    padding: 10px;
+    display: inline-block;
+}
+
+.job-item {
+    overflow: hidden;
+}
 
 /* Work Experience
 ------------------------------------*/
