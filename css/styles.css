@@ -27,6 +27,7 @@ body {
 }
 
 /* Gives a card look */
+/*
 header,
 main section,
 footer {
@@ -35,6 +36,7 @@ footer {
     padding: 22px 18px;
     border-radius: 16px;
 }
+*/
 
 h1 {
     font-family: "Caveat", cursive;
@@ -77,14 +79,11 @@ ul {
     overflow: hidden;
 }
 
-/* I did the css you asked for but I think it looks better without the circular
-profile image, so I commented it out. You can uncomment it if you want to see how it looks! */
-
-/*.column-narrow {
+.column-narrow {
     width: 30%;
     float: left;
     padding-right: 3%;
-    min-height: 175px;
+    min-height: 225px;  /* Image is not a circle without it being 225px tall. 175px plattens it slightly into an oval */
 }
 
 .column-wide {
@@ -92,7 +91,6 @@ profile image, so I commented it out. You can uncomment it if you want to see ho
     float: left;
     min-height: 225px;
 }
-    */
 
 /* Header & Footer
 ------------------------------------*/
@@ -105,30 +103,14 @@ footer {
     text-align: center;
 }
 
-header img {
-    width: 400px;          /* adjust size */
-    /* height: 180px;          makes it a rectangle and crops. I commented this out as I prefer the greater height */
-    border-radius: 10px;   /* set to 0px sharp corners */
-    object-fit: cover;
-    display: block;
-    margin: 0 auto 12px;
-}
-
-/* I did the css you asked for but I think it looks better without the circular
-profile image, so I commented it out. You can uncomment it if you want to see how it looks! */
-
-/* Note: only border-radius would remain. The rest would be deleted or commented out. */
-
-/*
 .profile-img {
-    width: 300px;
-    height: 300px;
+    /*width: 300px;*/
     border-radius: 50%;
     object-fit: cover;
-    float: left;
-    margin-right: 30px;
+    object-position: 80% center; /* Adjust the position to show more of the face */
+    /*float: left;*/
+    /*margin-right: 30px;*/
 }
-    */
 
 footer a {
     display: inline-block;
